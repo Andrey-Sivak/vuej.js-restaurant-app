@@ -10,7 +10,7 @@ export default {
       type: String,
       required: true,
       validator: function (value) {
-        return ["black", "orange", "white"].includes(value);
+        return ["black", "orange"].includes(value);
       },
       default: "orange",
     },
