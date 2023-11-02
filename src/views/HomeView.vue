@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-      <HomeHeader />
+      <HomeHeader heading="наша продукция" />
       <ProductList />
     </div>
   </div>
@@ -19,7 +19,7 @@ export default {
 
 <style>
 .home {
-  padding: 54px 20px 100px;
+  padding: 0 20px 100px;
   background-color: var(--black-color);
   color: white;
   min-height: 100vh;
