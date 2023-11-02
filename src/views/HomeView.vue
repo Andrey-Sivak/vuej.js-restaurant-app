@@ -2,18 +2,18 @@
   <div class="home">
     <div class="container">
       <HomeHeader />
-      <ProductsList />
+      <ProductList />
     </div>
   </div>
 </template>
 
 <script>
-import ProductsList from "@/components/ProductList.vue";
+import ProductList from "@/components/ProductList.vue";
 import HomeHeader from "@/components/HomeHeader.vue";
 
 export default {
   name: "HomeView",
-  components: { HomeHeader, ProductsList },
+  components: { HomeHeader, ProductList },
 };
 </script>
 
