@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .product {
   display: flex;
   flex-direction: column;
@@ -52,7 +52,14 @@ export default {
   border-radius: 2px;
 }
 
+.product:hover .product-name,
+.product:hover .product-price,
+.product:hover .product-description {
+  color: var(--orange-color);
+}
+
 .product-img-wrap img {
+  user-select: none;
   max-width: 100%;
   display: block;
   height: auto;
@@ -60,13 +67,21 @@ export default {
 }
 
 .product-name {
+  transition: all ease 0.3s;
+  display: block;
+  color: #fff;
   margin-bottom: 9px;
   font-size: 17px;
   font-weight: 500;
   line-clamp: 2;
 }
 
+.product-name:hover {
+  text-decoration: underline;
+}
+
 .product-description {
+  transition: all ease 0.3s;
   line-clamp: 4;
   font-size: 14px;
 }
@@ -80,6 +95,7 @@ export default {
 }
 
 .product-price {
+  transition: all ease 0.3s;
   font-size: 17px;
   font-weight: 500;
 }
@@ -91,5 +107,10 @@ export default {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.add-to-cart:hover svg path,
+.add-to-cart:hover svg circle {
+  stroke: var(--orange-color);
 }
 </style>
