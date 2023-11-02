@@ -74,6 +74,9 @@ export default {
   font-size: 17px;
   font-weight: 500;
   line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-name:hover {
@@ -82,7 +85,11 @@ export default {
 
 .product-description {
   transition: all ease 0.3s;
+  display: -webkit-box;
   line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 14px;
 }
 
