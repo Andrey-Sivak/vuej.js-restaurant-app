@@ -23,6 +23,10 @@ h1 {
   list-style-type: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
