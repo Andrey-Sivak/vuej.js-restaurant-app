@@ -43,7 +43,7 @@
           <span>Я согласен получать обновления на почту</span>
         </label>
         <div class="auth-button-wrap">
-          <button class="auth-button" type="submit">{{ buttonText }}</button>
+          <ColorButton :text="buttonText" color="orange" />
         </div>
       </form>
     </div>
@@ -52,6 +52,7 @@
 
 <script>
 import * as yup from "yup";
+import ColorButton from "@/components/ColorButton.vue";
 
 const schema = yup.object().shape({
   login: yup
@@ -68,6 +69,7 @@ const schema = yup.object().shape({
 
 export default {
   name: "AuthView",
+  components: { ColorButton },
   data() {
     return {
       login: "",
@@ -252,21 +254,6 @@ export default {
 
 .auth-button-wrap {
   padding-top: 13px;
-}
-
-.auth-button {
-  display: block;
-  width: 200px;
-  margin: 0 auto;
-  cursor: pointer;
-  background-color: var(--orange-color);
-  border-radius: 4px;
-  text-align: center;
-  padding: 12px 0;
-  font-size: 14px;
-  color: var(--black-color);
-  border: none;
-  outline: none;
 }
 
 .auth-form-error {
