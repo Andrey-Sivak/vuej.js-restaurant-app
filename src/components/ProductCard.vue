@@ -1,15 +1,17 @@
 <template>
   <li class="product">
     <div class="">
-      <figure class="product-img-wrap">
+      <router-link :to="`/product/${product.id}`" class="product-img-wrap">
         <img
           :src="require(`@/assets/product-images/${product.image}`)"
           :alt="product.name"
           width="270"
           height="270"
         />
-      </figure>
-      <p class="product-name">{{ product.name }}</p>
+      </router-link>
+      <router-link :to="`/product/${product.id}`" class="product-name">{{
+        product.name
+      }}</router-link>
       <p class="product-description">{{ product.description }}</p>
     </div>
     <div class="product-footer">

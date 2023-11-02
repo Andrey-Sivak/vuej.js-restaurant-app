@@ -17,6 +17,11 @@ const routes = [
     name: "register",
     component: () => import("../views/AuthView.vue"),
   },
+  {
+    path: "/product/:id",
+    name: "product",
+    component: () => import("../views/ProductView.vue"),
+  },
 ];
 
 const router = createRouter({
