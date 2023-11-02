@@ -13,6 +13,16 @@
   --red-color: #ff0b0b;
 }
 
+p,
+ol,
+ul,
+li,
+h1 {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,5 +33,9 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
 }
 </style>
