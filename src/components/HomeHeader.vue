@@ -55,6 +55,7 @@ export default {
     logout() {
       userLogout();
       this.isUserLoggedIn = false;
+      this.$router.push("/login");
     },
   },
   mounted() {
