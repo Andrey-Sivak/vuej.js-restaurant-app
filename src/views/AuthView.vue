@@ -42,6 +42,12 @@
           <input type="checkbox" :checked="isAgree" id="is-agree" hidden />
           <span>Я согласен получать обновления на почту</span>
         </label>
+        <span
+          v-if="status.message"
+          class="auth-main-error"
+          :class="status.isValid ? 'success' : 'error'"
+          >{{ status.message }}</span
+        >
         <div class="auth-button-wrap">
           <ColorButton :text="buttonText" color="orange" type="submit" />
         </div>
@@ -53,6 +59,8 @@
 <script>
 import * as yup from "yup";
 import ColorButton from "@/components/ColorButton.vue";
+import { generalLocalStorageKey, loginUser, registerUser } from "@/api/users";
+import router from "@/router";
 
 const schema = yup.object().shape({
   login: yup
@@ -79,6 +87,10 @@ export default {
         login: null,
         password: null,
       },
+      status: {
+        isValid: true,
+        message: "",
+      },
     };
   },
   computed: {
@@ -100,6 +112,44 @@ export default {
   },
   methods: {
     async submitHandler() {
+      await this.validate();
+
+      if (this.errors.login || this.errors.password) return;
+
+      let result;
+
+      if (this.isLogin) {
+        result = this.userLogin();
+      } else {
+        result = this.userRegister();
+      }
+
+      if (!result.success) {
+        this.status.isValid = false;
+        this.status.message = result.message;
+      }
+
+      this.status.isValid = true;
+      this.status.message = result.message;
+
+      setTimeout(() => router.push("/"), 2000);
+    },
+
+    userLogin() {
+      return loginUser({
+        name: this.login,
+        password: this.password,
+      });
+    },
+
+    userRegister() {
+      return registerUser({
+        name: this.login,
+        password: this.password,
+      });
+    },
+
+    async validate() {
       try {
         await schema.validate(
           {
@@ -131,6 +181,13 @@ export default {
     resetPasswordError() {
       this.errors.password = null;
     },
+  },
+  mounted() {
+    const restaurantData = JSON.parse(
+      window.localStorage.getItem(generalLocalStorageKey)
+    );
+
+    if (restaurantData.activeUser?.id) router.push("/");
   },
 };
 </script>
@@ -264,6 +321,20 @@ export default {
   top: 102%;
   font-weight: 300;
   font-size: 12px;
+}
+
+.auth-main-error {
+  text-align: left;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.auth-main-error.success {
+  color: green;
+}
+
+.auth-main-error.error {
+  color: var(--red-color);
 }
 
 .auth-form-field {

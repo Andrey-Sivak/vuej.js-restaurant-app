@@ -12,11 +12,10 @@
     </div>
 
     <div class="mini-cart">
-      <router-link to="/login">
+      <router-link to="/login" v-if="!isUserLoggedIn">
         <ColorButton text="Войти" color="orange" />
       </router-link>
-
-      <ColorButton text="Выйти" color="black" />
+      <ColorButton text="Выйти" color="black" v-else @click="logout" />
     </div>
   </header>
 </template>
@@ -24,6 +23,7 @@
 <script>
 import ColorButton from "@/components/ColorButton.vue";
 import IconBack from "@/components/IconBack.vue";
+import { generalLocalStorageKey, userLogout } from "@/api/users";
 
 export default {
   name: "HomeHeader",
@@ -34,10 +34,27 @@ export default {
       required: false,
     },
   },
+  data() {
+    return {
+      isUserLoggedIn: false,
+    };
+  },
   methods: {
     hasHistory() {
       return window.history.length > 2;
     },
+
+    logout() {
+      userLogout();
+      this.isUserLoggedIn = false;
+    },
+  },
+  mounted() {
+    const restaurantData = JSON.parse(
+      window.localStorage.getItem(generalLocalStorageKey)
+    );
+
+    if (restaurantData.activeUser?.id) this.isUserLoggedIn = true;
   },
 };
 </script>
