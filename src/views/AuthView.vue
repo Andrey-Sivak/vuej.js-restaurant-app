@@ -43,7 +43,7 @@
           <span>Я согласен получать обновления на почту</span>
         </label>
         <div class="auth-button-wrap">
-          <ColorButton :text="buttonText" color="orange" />
+          <ColorButton :text="buttonText" color="orange" type="submit" />
         </div>
       </form>
     </div>
