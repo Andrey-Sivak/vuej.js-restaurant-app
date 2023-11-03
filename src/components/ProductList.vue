@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import products from "@/data/products.json";
 import ProductCard from "@/components/ProductCard.vue";
 
 export default {
@@ -21,8 +20,13 @@ export default {
   components: { ProductCard },
   data() {
     return {
-      products,
+      products: [],
     };
+  },
+  mounted() {
+    this.products = JSON.parse(
+      window.localStorage.getItem("restaurant-products")
+    );
   },
 };
 </script>

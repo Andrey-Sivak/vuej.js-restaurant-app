@@ -2,6 +2,20 @@
   <router-view />
 </template>
 
+<script>
+import products from "@/data/products.json";
+
+export default {
+  name: "App",
+  mounted() {
+    window.localStorage.setItem(
+      "restaurant-products",
+      JSON.stringify(products)
+    );
+  },
+};
+</script>
+
 <style>
 :root {
   --black-color: #161516;

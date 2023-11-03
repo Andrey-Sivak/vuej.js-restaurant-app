@@ -25,8 +25,8 @@
 
 <script>
 import HomeHeader from "@/components/HomeHeader.vue";
-import products from "@/data/products.json";
 import ColorButton from "@/components/ColorButton.vue";
+import { generalLocalStorageKey } from "@/api/api";
 
 export default {
   name: "ProductView",
@@ -45,6 +45,10 @@ export default {
     },
   },
   mounted() {
+    const products = JSON.parse(
+      window.localStorage.getItem("restaurant-products")
+    );
+
     this.product = products.find(
       (product) => Number(product.id) === Number(this.$route.params.id)
     );
