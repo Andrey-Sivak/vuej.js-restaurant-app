@@ -15,7 +15,11 @@
           <p class="product-desc">{{ product.description }}</p>
           <div class="product-info-footer">
             <p class="product-info-price">{{ formattedPrice }}&nbsp;₽</p>
-            <ColorButton text="В корзину" color="orange" />
+            <ColorButton
+              @click="addProductToCart"
+              text="В корзину"
+              color="orange"
+            />
           </div>
         </div>
       </main>
@@ -26,7 +30,9 @@
 <script>
 import HomeHeader from "@/components/HomeHeader.vue";
 import ColorButton from "@/components/ColorButton.vue";
+import { mapActions } from "vuex";
 import { generalLocalStorageKey } from "@/api/api";
+import router from "@/router";
 
 export default {
   name: "ProductView",
@@ -44,7 +50,22 @@ export default {
         .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     },
   },
+  methods: {
+    ...mapActions(["addToCart"]),
+    addProductToCart() {
+      this.addToCart(this.product.id);
+    },
+  },
   mounted() {
+    const restaurantData = JSON.parse(
+      window.localStorage.getItem(generalLocalStorageKey)
+    );
+
+    if (!restaurantData?.activeUser?.id) {
+      router.push("/login");
+      return;
+    }
+
     const products = JSON.parse(
       window.localStorage.getItem("restaurant-products")
     );

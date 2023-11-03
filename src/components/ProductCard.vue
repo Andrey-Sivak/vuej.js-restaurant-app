@@ -16,13 +16,16 @@
     </div>
     <div class="product-footer">
       <p class="product-price">{{ formattedPrice }}&nbsp;₽</p>
-      <button class="add-to-cart"><IconPlus /></button>
+      <button @click="addProductToCart" class="add-to-cart">
+        <IconPlus />
+      </button>
     </div>
   </li>
 </template>
 
 <script>
 import IconPlus from "@/components/IconPlus.vue";
+import { mapActions } from "vuex";
 
 export default {
   name: "ProductCard",
@@ -38,6 +41,12 @@ export default {
       return this.product.price
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    },
+  },
+  methods: {
+    ...mapActions(["addToCart"]),
+    addProductToCart() {
+      this.addToCart(this.product.id);
     },
   },
 };

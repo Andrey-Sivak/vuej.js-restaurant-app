@@ -59,7 +59,7 @@
 <script>
 import * as yup from "yup";
 import ColorButton from "@/components/ColorButton.vue";
-import { generalLocalStorageKey, loginUser, registerUser } from "@/api/users";
+import { generalLocalStorageKey, loginUser, registerUser } from "@/api/api";
 import router from "@/router";
 
 const schema = yup.object().shape({
@@ -187,7 +187,7 @@ export default {
       window.localStorage.getItem(generalLocalStorageKey)
     );
 
-    if (restaurantData.activeUser?.id) router.push("/");
+    if (restaurantData?.activeUser?.id) router.push("/");
   },
 };
 </script>

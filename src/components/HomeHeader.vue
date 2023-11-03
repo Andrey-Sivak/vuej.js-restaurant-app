@@ -11,7 +11,9 @@
       <h1 v-if="heading" class="caption">{{ heading }}</h1>
     </div>
 
-    <div class="mini-cart">
+    <div class="header-right">
+      <MiniCart v-if="isUserLoggedIn && isMiniCart" />
+
       <router-link to="/login" v-if="!isUserLoggedIn">
         <ColorButton text="Войти" color="orange" />
       </router-link>
@@ -23,15 +25,21 @@
 <script>
 import ColorButton from "@/components/ColorButton.vue";
 import IconBack from "@/components/IconBack.vue";
-import { generalLocalStorageKey, userLogout } from "@/api/users";
+import { generalLocalStorageKey, userLogout } from "@/api/api";
+import MiniCart from "@/components/MiniCart.vue";
 
 export default {
   name: "HomeHeader",
-  components: { IconBack, ColorButton },
+  components: { MiniCart, IconBack, ColorButton },
   props: {
     heading: {
       type: String,
       required: false,
+    },
+    isMiniCart: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
   },
   data() {
@@ -54,7 +62,7 @@ export default {
       window.localStorage.getItem(generalLocalStorageKey)
     );
 
-    if (restaurantData.activeUser?.id) this.isUserLoggedIn = true;
+    if (restaurantData?.activeUser?.id) this.isUserLoggedIn = true;
   },
 };
 </script>
@@ -97,5 +105,11 @@ export default {
 
 .back-button:hover circle {
   stroke: white;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
 }
 </style>
