@@ -105,3 +105,21 @@ export const userLogout = () => {
     JSON.stringify(restaurantData)
   );
 };
+
+export const updateCart = (updatedCart) => {
+  const restaurantData = JSON.parse(
+    window.localStorage.getItem(generalLocalStorageKey)
+  );
+
+  restaurantData.activeUser.cart = updatedCart;
+
+  const currentUser = restaurantData.users.find(
+    (user) => user.id === restaurantData.activeUser.id
+  );
+  currentUser.cart = updatedCart;
+
+  window.localStorage.setItem(
+    generalLocalStorageKey,
+    JSON.stringify(restaurantData)
+  );
+};
