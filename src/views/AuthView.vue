@@ -127,6 +127,7 @@ export default {
       if (!result.success) {
         this.status.isValid = false;
         this.status.message = result.message;
+        return;
       }
 
       this.status.isValid = true;
