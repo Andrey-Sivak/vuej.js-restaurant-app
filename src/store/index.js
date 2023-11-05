@@ -100,7 +100,7 @@ export default createStore({
           (cartItem) => item.id === cartItem.id
         );
 
-        if (!productInCart) return 0;
+        if (!productInCart) return total + 0;
 
         return total + productInCart.count * item.price;
       }, 0);
