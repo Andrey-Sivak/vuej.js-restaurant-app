@@ -1,0 +1,39 @@
+name: Deploy Vue 3 App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install || yarn install
+
+      - name: Build Vue app
+        run: npm run build || yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+        run: |
+          # Create the gh-pages branch if it doesn't exist
+          git checkout -b gh-pages || true
+
+          # Copy the built app to the gh-pages branch
+          cp -r dist .
+
+          # Commit and push the changes to the gh-pages branch
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push origin gh-pages
+
+          # Set the gh-pages branch as the default branch for GitHub Pages
+          git push --set-upstream origin gh-pages
