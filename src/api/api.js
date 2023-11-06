@@ -20,7 +20,7 @@ export const registerUser = (data) => {
 
     return {
       success: true,
-      message: "Регистрация прошла успешно!",
+      message: "Successfully sign up!",
     };
   }
 
@@ -32,7 +32,7 @@ export const registerUser = (data) => {
   if (users.find((user) => user.name === name)) {
     return {
       success: false,
-      message: "Пользователь с таким именем уже существует.",
+      message: "A user with the same name already exists.",
     };
   }
 
@@ -46,7 +46,7 @@ export const registerUser = (data) => {
 
   return {
     success: true,
-    message: "Регистрация прошла успешно!",
+    message: "Successfully sign up!",
   };
 };
 
@@ -56,7 +56,7 @@ export const loginUser = (data) => {
   if (!window.localStorage.getItem(generalLocalStorageKey)) {
     return {
       success: false,
-      message: "Пользователь с таким именем не найден.",
+      message: "User with this name not found.",
     };
   }
 
@@ -69,7 +69,7 @@ export const loginUser = (data) => {
   if (!currentUser) {
     return {
       success: false,
-      message: "Пользователь с таким именем не найден.",
+      message: "User with this name not found.",
     };
   }
 
@@ -78,7 +78,7 @@ export const loginUser = (data) => {
   if (!isPasswordValid) {
     return {
       success: false,
-      message: "Неверный пароль.",
+      message: "Incorrect password.",
     };
   }
 
@@ -90,7 +90,7 @@ export const loginUser = (data) => {
 
   return {
     success: true,
-    message: "Вы успешно авторизовались!",
+    message: "You have successfully logged in!",
   };
 };
 
