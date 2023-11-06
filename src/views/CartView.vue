@@ -1,5 +1,5 @@
 <template>
-  <div class="cart-view">
+  <div v-if="isUserLoggedIn" class="cart-view">
     <div class="container">
       <HomeHeader heading="Cart" :is-mini-cart="false" />
 
@@ -19,13 +19,22 @@ import router from "@/router";
 export default {
   name: "CartView",
   components: { CartFooter, CartList, HomeHeader },
-  mounted() {
+  data() {
+    return {
+      isUserLoggedIn: false,
+    };
+  },
   beforeCreate() {
     const restaurantData = JSON.parse(
       window.localStorage.getItem(generalLocalStorageKey)
     );
 
-    if (!restaurantData?.activeUser?.id) router.push("/login");
+    if (!restaurantData?.activeUser?.id) {
+      router.push("/login");
+      return;
+    }
+
+    this.isUserLoggedIn = true;
   },
 };
 </script>
