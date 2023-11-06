@@ -16,7 +16,7 @@
               invalid: errors.login,
             }"
             v-model="login"
-            placeholder="Логин"
+            placeholder="Login"
             @input="resetLoginError"
           />
           <span class="auth-form-error" v-if="errors.login">{{
@@ -31,7 +31,7 @@
               invalid: errors.password,
             }"
             v-model="password"
-            placeholder="Пароль"
+            placeholder="Password"
             @input="resetPasswordError"
           />
           <span class="auth-form-error" v-if="errors.password">{{
@@ -40,7 +40,7 @@
         </div>
         <label for="is-agree" class="checkbox-label" v-if="!isLogin">
           <input type="checkbox" :checked="isAgree" id="is-agree" hidden />
-          <span>Я согласен получать обновления на почту</span>
+          <span>I agree to receive updates by email</span>
         </label>
         <span
           v-if="status.message"
@@ -65,14 +65,14 @@ import router from "@/router";
 const schema = yup.object().shape({
   login: yup
     .string()
-    .required("Введите логин")
-    .min(5, "Логин должен содержать не менее 5 символов")
-    .max(25, "Логин должен содержать не более 25 символов"),
+    .required("Enter login")
+    .min(5, "Login must contain at least 5 characters")
+    .max(25, "Login must contain no more than 25 characters"),
   password: yup
     .string()
-    .required("Введите пароль")
-    .min(8, "Пароль должен содержать не менее 8 символов")
-    .max(25, "Пароль должен содержать не более - 25 символов"),
+    .required("Enter password")
+    .min(8, "The password must contain at least 8 characters")
+    .max(25, "The password must contain no more than 25 characters"),
 });
 
 export default {
@@ -101,13 +101,13 @@ export default {
       return this.isLogin ? "/register" : "/login";
     },
     changeAuthText() {
-      return this.isLogin ? "Зарегистрироваться" : "Авторизоваться";
+      return this.isLogin ? "Sign up" : "Sign in";
     },
     title() {
-      return this.isLogin ? "Вход" : "Регистрация";
+      return this.isLogin ? "Sign in" : "Sign up";
     },
     buttonText() {
-      return this.isLogin ? "Войти" : "Зарегистрироваться";
+      return this.isLogin ? "Sign in" : "Sign up";
     },
   },
   methods: {

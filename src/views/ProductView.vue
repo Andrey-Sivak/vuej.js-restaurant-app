@@ -14,10 +14,10 @@
           <h1 class="product-title">{{ product.name }}</h1>
           <p class="product-desc">{{ product.description }}</p>
           <div class="product-info-footer">
-            <p class="product-info-price">{{ formattedPrice }}&nbsp;₽</p>
+            <p class="product-info-price">{{ formattedPrice }}&nbsp;$</p>
             <ColorButton
               @click="addProductToCart"
-              text="В корзину"
+              text="Add to cart"
               color="orange"
             />
           </div>

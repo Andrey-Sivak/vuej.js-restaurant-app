@@ -21,7 +21,7 @@
       </button>
     </div>
     <div class="cart-item-count">
-      <div class="cart-item-summ">{{ formatPrice(summ) }}&nbsp;₽</div>
+      <div class="cart-item-summ">{{ formatPrice(summ) }}&nbsp;$</div>
       <button class="cart-item-remove" @click="removeItem">
         <IconRemove />
       </button>

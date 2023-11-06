@@ -15,7 +15,7 @@
       <p class="product-description">{{ product.description }}</p>
     </div>
     <div class="product-footer">
-      <p class="product-price">{{ formattedPrice }}&nbsp;₽</p>
+      <p class="product-price">{{ formattedPrice }}&nbsp;$</p>
       <button @click="addProductToCart" class="add-to-cart">
         <IconPlus />
       </button>

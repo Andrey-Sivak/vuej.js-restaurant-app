@@ -1,10 +1,7 @@
 <template>
   <div class="cart-view">
     <div class="container">
-      <HomeHeader
-        heading="Корзина с выбранными товарами"
-        :is-mini-cart="false"
-      />
+      <HomeHeader heading="Cart" :is-mini-cart="false" />
 
       <CartList />
     </div>

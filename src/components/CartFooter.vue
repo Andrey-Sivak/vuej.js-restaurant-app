@@ -3,12 +3,12 @@
     <div class="container">
       <div class="wrap">
         <div class="footer-left">
-          <p class="footer-left-text">Заказ на сумму:</p>
-          <p class="footer-left-summ">{{ formatPrice(cartItemSumm) }}&nbsp;₽</p>
+          <p class="footer-left-text">Total:</p>
+          <p class="footer-left-summ">{{ formatPrice(cartItemSumm) }}&nbsp;$</p>
         </div>
 
         <div class="">
-          <ColorButton text="Оформить заказ" color="orange" />
+          <ColorButton text="Order" color="orange" />
         </div>
       </div>
     </div>

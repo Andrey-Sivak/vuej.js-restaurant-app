@@ -5,7 +5,7 @@
         formatProductCount(cartItemCount)
       }}</span>
       <span class="mini-cart-summ" v-if="cartItemSumm > 0"
-        >на сумму&nbsp;{{ formatPrice(cartItemSumm) }}&nbsp;₽</span
+        >Total:&nbsp;{{ formatPrice(cartItemSumm) }}&nbsp;$</span
       >
     </div>
     <router-link to="/cart" class="mini-cart-button">
@@ -26,15 +26,11 @@ export default {
   },
   methods: {
     formatProductCount(count) {
-      if (!count) {
-        return "Корзина пуста";
-      } else if (count === 1) {
-        return `${count} товар`;
-      } else if (count > 1 && count < 5) {
-        return `${count} товара`;
-      } else {
-        return `${count} товаров`;
-      }
+      if (!count) return "Cart is empty";
+
+      if (count === 1) return `${count} dish`;
+
+      return `${count} dishes`;
     },
     formatPrice(price) {
       return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");

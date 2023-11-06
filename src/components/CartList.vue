@@ -5,9 +5,9 @@
         <CartItem v-for="item of cartList" :key="item.id" :product="item" />
       </template>
       <div class="cart-empty" v-else>
-        Корзина пуста.
+        Cart is empty
         <br />
-        <router-link to="/">Перейти в магазин</router-link>
+        <router-link to="/">Back to shop</router-link>
       </div>
     </ul>
   </main>

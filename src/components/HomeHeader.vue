@@ -15,9 +15,9 @@
       <MiniCart v-if="isUserLoggedIn && isMiniCart" />
 
       <router-link to="/login" v-if="!isUserLoggedIn">
-        <ColorButton text="Войти" color="orange" />
+        <ColorButton text="Sign in" color="orange" />
       </router-link>
-      <ColorButton text="Выйти" color="black" v-else @click="logout" />
+      <ColorButton text="Logout" color="black" v-else @click="logout" />
     </div>
   </header>
 </template>

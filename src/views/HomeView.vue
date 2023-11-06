@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="container">
-      <HomeHeader heading="наша продукция" />
+      <HomeHeader heading="Our Dishes" />
       <ProductList />
     </div>
   </div>
