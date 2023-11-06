@@ -20,6 +20,7 @@ export default {
   name: "CartView",
   components: { CartFooter, CartList, HomeHeader },
   mounted() {
+  beforeCreate() {
     const restaurantData = JSON.parse(
       window.localStorage.getItem(generalLocalStorageKey)
     );

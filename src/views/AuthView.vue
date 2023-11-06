@@ -183,7 +183,7 @@ export default {
       this.errors.password = null;
     },
   },
-  mounted() {
+  beforeCreate() {
     const restaurantData = JSON.parse(
       window.localStorage.getItem(generalLocalStorageKey)
     );
