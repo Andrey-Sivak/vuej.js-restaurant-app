@@ -31,8 +31,6 @@
 import HomeHeader from "@/components/HomeHeader.vue";
 import ColorButton from "@/components/ColorButton.vue";
 import { mapActions } from "vuex";
-import { generalLocalStorageKey } from "@/api/api";
-import router from "@/router";
 
 export default {
   name: "ProductView",
@@ -55,15 +53,6 @@ export default {
     },
   },
   mounted() {
-    const restaurantData = JSON.parse(
-      window.localStorage.getItem(generalLocalStorageKey)
-    );
-
-    if (!restaurantData?.activeUser?.id) {
-      router.push("/login");
-      return;
-    }
-
     const products = JSON.parse(
       window.localStorage.getItem("restaurant-products")
     );

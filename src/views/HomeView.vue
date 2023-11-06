@@ -10,19 +10,10 @@
 <script>
 import ProductList from "@/components/ProductList.vue";
 import HomeHeader from "@/components/HomeHeader.vue";
-import { generalLocalStorageKey } from "@/api/api";
-import router from "@/router";
 
 export default {
   name: "HomeView",
   components: { HomeHeader, ProductList },
-  mounted() {
-    const restaurantData = JSON.parse(
-      window.localStorage.getItem(generalLocalStorageKey)
-    );
-
-    if (!restaurantData?.activeUser?.id) router.push("/login");
-  },
 };
 </script>
 
