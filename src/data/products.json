@@ -1,23 +1,128 @@
 [
   {
     "id": 1,
-    "name": "Устрицы по рокфеллеровски",
-    "price": 2700,
-    "description": "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры",
+    "name": "Rockefeller Oysters",
+    "price": 27,
+    "description": "Indulge in the exquisite flavors of our Rockefeller Oysters, a delicacy that combines the briny goodness of fresh oysters with a decadent Rockefeller sauce. These plump and juicy oysters are carefully prepared and topped with a creamy blend of spinach, herbs, and parmesan, then baked to perfection. The result is a harmonious marriage of oceanic richness and savory elegance, making it a must-try for seafood enthusiasts and connoisseurs alike.",
     "image": "prod-1.png"
   },
   {
     "id": 2,
-    "name": "Свиные ребрышки на гриле с зеленью",
-    "price": 1600,
+    "name": "Grilled Pork Ribs with Herbs",
+    "price": 16,
     "description": "Не следует, однако забывать, что консультация с широким активом представляет собой интересный эксперимент проверки новых предложений. Не следует, однако забывать, что сложившаяся структура организации позволяет оценить значение новых предложений. Разнообразный и богатый опыт начало повседневной работы по формированию позиции требуют от нас анализа позиций.Не следует, однако забывать, что консультация с широким активом представляет собой интересный эксперимент проверки новых предложений. Не следует, однако забывать, что сложившаяся структура организации позволяет оценить значение новых предложений.",
     "image": "prod-2.png"
   },
   {
     "id": 3,
-    "name": "Креветки по-королевски\nв лимонном соке",
-    "price": 1820,
-    "description": "Значимость этих проблем настолько очевидна, что укрепление и развитие структуры обеспечивает широкому кругу",
+    "name": "King Prawns in Lemon Juice",
+    "price": 18.2,
+    "description": "Delight in the tantalizing zest of our King Prawns in Lemon Juice. These succulent prawns are marinated in a zesty lemon juice that awakens your taste buds with a burst of fresh citrus. Grilled to perfection, they offer a delightful balance of juiciness and tanginess. The dish is a celebration of the sea's finest, where each bite is an exploration of vibrant flavors that transport you to the sun-kissed shores.",
     "image": "prod-3.png"
+  },
+  {
+    "id": 4,
+    "name": "Classic Caesar Salad",
+    "price": 12.5,
+    "description": "Indulge in the timeless perfection of our Classic Caesar Salad. Crisp romaine lettuce, accompanied by garlic croutons and a generous sprinkling of Parmesan cheese, is luxuriously dressed with our creamy Caesar dressing. A harmonious blend of flavors and textures awaits, making it a quintessential choice for salad enthusiasts and a delightful prelude to your main course.",
+    "image": "prod-1.png"
+  },
+  {
+    "id": 5,
+    "name": "Beef Tenderloin Steak",
+    "price": 32.5,
+    "description": "Experience the epitome of succulence with our Beef Tenderloin Steak. Our expertly seared, premium cut of beef tenderloin is cooked to perfection, resulting in a melt-in-your-mouth masterpiece. This steak promises an unforgettable dining experience, boasting tenderness, juiciness, and a rich flavor that lingers with every bite. Savor the finest in steak cuisine.",
+    "image": "prod-1.png"
+  },
+  {
+    "id": 6,
+    "name": "Mango Tango Smoothie",
+    "price": 6.8,
+    "description": "Unleash your taste buds with our Mango Tango Smoothie, a tropical symphony of ripe mango, sweet pineapple, and velvety coconut milk. This vibrant blend offers a refreshing and healthy treat, making it the perfect choice for those seeking a burst of exotic flavor and a revitalizing sip of sunshine. Embrace the tropics in a glass!",
+    "image": "prod-2.png"
+  },
+  {
+    "id": 7,
+    "name": "Vegetable Spring Rolls",
+    "price": 8.2,
+    "description": "Crisp and savory, our Vegetable Spring Rolls are a delight for the senses. Each bite reveals a medley of colorful vegetables encased in a delicate, golden-brown wrapper. Served alongside a delectable sweet chili dipping sauce, these spring rolls are perfect for appetizers or a light and satisfying snack. Dive into the world of exquisite textures and flavors.",
+    "image": "prod-1.png"
+  },
+  {
+    "id": 8,
+    "name": "Lemon Butter Shrimp Pasta",
+    "price": 15.7,
+    "description": "Embark on a culinary journey with our Lemon Butter Shrimp Pasta. Succulent shrimp and al dente pasta are bathed in a luscious lemon butter sauce that combines the zesty freshness of citrus with the rich creaminess of butter. This exquisite dish is a harmonious balance of flavors that will transport your taste buds to a realm of culinary delight.",
+    "image": "prod-3.png"
+  },
+  {
+    "id": 9,
+    "name": "Sushi Deluxe Platter",
+    "price": 28.9,
+    "description": "Indulge in the art of Japanese cuisine with our Sushi Deluxe Platter. This delightful assortment features an array of expertly crafted sushi rolls and sashimi, each showcasing the finest, freshest ingredients. Whether you're a sushi connoisseur or a first-time explorer, this platter offers an unforgettable taste of Japan's culinary traditions.",
+    "image": "prod-2.png"
+  },
+  {
+    "id": 10,
+    "name": "Spicy Tofu Stir-Fry",
+    "price": 13.4,
+    "description": "Experience the perfect blend of heat and flavor with our Spicy Tofu Stir-Fry. Silken tofu mingles with crisp, vibrant vegetables in a fiery stir-fry sauce, creating a plant-based masterpiece that tantalizes your palate. Whether you're a dedicated vegetarian or a spice enthusiast, this dish will satisfy your cravings.",
+    "image": "prod-1.png"
+  },
+  {
+    "id": 11,
+    "name": "Lobster Bisque",
+    "price": 20.2,
+    "description": "Delight in the opulence of our Lobster Bisque, a velvety and indulgent soup that exudes the rich essence of the finest lobster meat. Each spoonful is a journey into seafood perfection, with a creamy texture and a deep, savory flavor profile. This soup is an exquisite ode to the ocean, ideal for discerning seafood lovers.",
+    "image": "prod-1.png"
+  },
+  {
+    "id": 12,
+    "name": "Chocolate Lava Cake",
+    "price": 9.5,
+    "description": "Satisfy your sweet tooth with our Chocolate Lava Cake, a decadent dessert that promises a moment of pure indulgence. As you dig your spoon into this warm, gooey cake, a river of molten chocolate flows forth, perfectly complemented by a scoop of velvety vanilla ice cream. Let the dessert lover in you rejoice.",
+    "image": "prod-2.png"
+  },
+  {
+    "id": 13,
+    "name": "Greek Salad",
+    "price": 10.8,
+    "description": "Experience the freshness and flavors of Greece with our Greek Salad. This crisp and refreshing ensemble combines ripe tomatoes, crisp cucumbers, plump olives, creamy feta cheese, and fragrant basil leaves, all kissed by a drizzle of balsamic glaze. It's a Mediterranean delight that captures the essence of sunny Greece.",
+    "image": "prod-2.png"
+  },
+  {
+    "id": 14,
+    "name": "Chicken Tikka Masala",
+    "price": 14.9,
+    "description": "Savor the culinary magic of India with our Chicken Tikka Masala. Tender pieces of chicken are bathed in a sumptuous, tomato-based sauce infused with aromatic spices. Served alongside fragrant basmati rice and warm naan bread, this dish is a journey through the rich, savory traditions of Indian cuisine.",
+    "image": "prod-3.png"
+  },
+  {
+    "id": 15,
+    "name": "Vegetarian Pad Thai",
+    "price": 12.3,
+    "description": "Discover the vibrant flavors of Thailand with our Vegetarian Pad Thai. This flavorful and tangy noodle dish features marinated tofu, fresh vegetables, and crushed peanuts, creating a symphony of tastes and textures that will transport you to the bustling streets of Bangkok. It's a vegetarian delight that brings the essence of Thai cuisine to your plate.",
+    "image": "prod-1.png"
+  },
+  {
+    "id": 16,
+    "name": "Fresh Berry Parfait",
+    "price": 7.6,
+    "description": "Satisfy your cravings with our Fresh Berry Parfait, a delightful and guilt-free treat. Layers of creamy Greek yogurt, crunchy granola, and a medley of fresh berries come together to create a delightful fusion of textures and flavors. Topped with a drizzle of golden honey, this parfait is a perfect way to start or end your day.",
+    "image": "prod-1.png"
+  },
+  {
+    "id": 17,
+    "name": "Beef and Broccoli Stir-Fry",
+    "price": 15.2,
+    "description": "Experience the art of Asian cuisine with our Beef and Broccoli Stir-Fry. Sliced beef, crisp broccoli florets, and vibrant bell peppers are brought together in a savory stir-fry sauce that perfectly balances sweet and savory notes. It's a quick and flavorful journey to the bustling streets of Chinatown.",
+    "image": "prod-3.png"
+  },
+  {
+    "id": 18,
+    "name": "Caprese Salad",
+    "price": 11.4,
+    "description": "Indulge in the simplicity of our Caprese Salad, a classic Italian masterpiece. Ripe tomatoes, fresh mozzarella, fragrant basil leaves, and a drizzle of balsamic glaze come together in perfect harmony. This salad is a celebration of the finest, freshest ingredients and the timeless culinary traditions of Italy.",
+    "image": "prod-1.png"
   }
 ]
