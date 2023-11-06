@@ -17,7 +17,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build_deploy_vue:
+  build:
     environment: github-pages
     runs-on: ubuntu-latest
     name: Build and Deploy Vue
