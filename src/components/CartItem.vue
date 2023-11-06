@@ -48,7 +48,7 @@ export default {
     ...mapActions(["decreaseProductCount", "removeFromCart", "addToCart"]),
 
     formatPrice(price) {
-      return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return price.toFixed(2);
     },
 
     decrease() {

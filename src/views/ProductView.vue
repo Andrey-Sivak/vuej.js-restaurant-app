@@ -45,9 +45,7 @@ export default {
   },
   computed: {
     formattedPrice() {
-      return this.product.price
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+      return this.product.price.toFixed(2);
     },
   },
   methods: {
